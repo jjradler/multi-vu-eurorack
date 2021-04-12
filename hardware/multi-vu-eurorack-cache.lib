@@ -236,6 +236,29 @@ X GND 6 -100 -400 150 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
+# Connector_AudioJack2_SwitchT
+#
+DEF Connector_AudioJack2_SwitchT J 0 20 Y Y 1 F N
+F0 "J" 0 350 50 H V C CNN
+F1 "Connector_AudioJack2_SwitchT" 0 250 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Jack*
+$ENDFPLIST
+DRAW
+S -100 0 -150 -100 0 1 10 F
+S 100 150 -100 -200 0 1 10 f
+P 2 0 1 0 70 -10 80 -30 N
+P 4 0 1 10 0 0 25 -25 50 0 100 0 N
+P 4 0 1 0 100 -100 70 -100 70 -10 60 -30 N
+P 5 0 1 10 100 100 -25 100 -25 0 -50 -25 -75 0 N
+X ~ S 200 100 100 L 50 50 1 1 P
+X ~ T 200 0 100 L 50 50 1 1 P
+X ~ TN 200 -100 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Device_D_Schottky_Small_ALT
 #
 DEF Device_D_Schottky_Small_ALT D 0 10 N N 1 F N
