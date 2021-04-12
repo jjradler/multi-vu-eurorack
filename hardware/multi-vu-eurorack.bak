@@ -2889,19 +2889,9 @@ F 3 "~" H 2400 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2600 3250 2700 3250
-Wire Wire Line
 	2600 3150 2700 3150
 Wire Wire Line
-	2700 3150 2700 3250
-Connection ~ 2700 3250
-Wire Wire Line
-	2700 3250 2950 3250
-Wire Wire Line
-	2700 3250 2700 3350
-Wire Wire Line
 	2600 3350 2700 3350
-Connection ~ 2700 3350
 Wire Wire Line
 	2700 3350 2700 3550
 $Comp
@@ -2915,4 +2905,11 @@ F 3 "" H 2700 3550 50  0001 C CNN
 	1    2700 3550
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2700 3150 2700 3250
+Connection ~ 2700 3350
+Wire Wire Line
+	2700 3250 2700 3350
+Wire Wire Line
+	2600 3250 2950 3250
 $EndSCHEMATC

@@ -1091,7 +1091,7 @@ Wire Wire Line
 Connection ~ 4550 4000
 Text Label 5100 4400 2    50   ~ 0
 MULT_INPUT
-Text Label 2700 3250 0    50   ~ 0
+Text Label 2000 3250 2    50   ~ 0
 INPUT
 Wire Wire Line
 	11150 9000 11150 9050
@@ -2880,39 +2880,38 @@ $EndComp
 $Comp
 L Connector:AudioJack2_SwitchT J1
 U 1 1 60D7F728
-P 2400 3250
-F 0 "J1" H 2432 3575 50  0000 C CNN
-F 1 "AudioJack2_SwitchT" H 2432 3484 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 2400 3250 50  0001 C CNN
-F 3 "~" H 2400 3250 50  0001 C CNN
-	1    2400 3250
+P 1250 3250
+F 0 "J1" H 1282 3575 50  0000 C CNN
+F 1 "AudioJack2_SwitchT" H 1282 3484 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 1250 3250 50  0001 C CNN
+F 3 "~" H 1250 3250 50  0001 C CNN
+	1    1250 3250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2600 3250 2700 3250
+	1450 3150 1550 3150
 Wire Wire Line
-	2600 3150 2700 3150
+	1450 3350 1550 3350
 Wire Wire Line
-	2700 3150 2700 3250
-Connection ~ 2700 3250
-Wire Wire Line
-	2700 3250 2950 3250
-Wire Wire Line
-	2700 3250 2700 3350
-Wire Wire Line
-	2600 3350 2700 3350
-Connection ~ 2700 3350
-Wire Wire Line
-	2700 3350 2700 3550
+	1550 3350 1550 3550
 $Comp
 L 4ms-power:GND #PWR03
 U 1 1 60E2588D
-P 2700 3550
-F 0 "#PWR03" H 2700 3300 50  0001 C CNN
-F 1 "GND" H 2705 3377 50  0000 C CNN
-F 2 "" H 2700 3550 50  0001 C CNN
-F 3 "" H 2700 3550 50  0001 C CNN
-	1    2700 3550
+P 1550 3550
+F 0 "#PWR03" H 1550 3300 50  0001 C CNN
+F 1 "GND" H 1555 3377 50  0000 C CNN
+F 2 "" H 1550 3550 50  0001 C CNN
+F 3 "" H 1550 3550 50  0001 C CNN
+	1    1550 3550
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1450 3250 2000 3250
+Wire Wire Line
+	1550 3350 1550 3150
+Connection ~ 1550 3350
+Wire Wire Line
+	2950 3250 2550 3250
+Text Label 2550 3250 0    50   ~ 0
+INPUT
 $EndSCHEMATC
