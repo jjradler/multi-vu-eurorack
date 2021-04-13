@@ -53,7 +53,7 @@ U 1 1 6073A1D2
 P 11050 3100
 F 0 "IC3" H 11050 3050 50  0000 C CNN
 F 1 "74HC595" H 11250 2450 50  0000 C CNN
-F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 11050 3100 50  0001 C CNN
+F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 11050 3100 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 11050 3100 50  0001 C CNN
 	1    11050 3100
 	1    0    0    -1  
@@ -64,7 +64,7 @@ U 1 1 6073AEBF
 P 11050 5300
 F 0 "IC4" H 11050 5250 50  0000 C CNN
 F 1 "74HC595" H 11250 4650 50  0000 C CNN
-F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 11050 5300 50  0001 C CNN
+F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 11050 5300 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 11050 5300 50  0001 C CNN
 	1    11050 5300
 	1    0    0    -1  
@@ -81,14 +81,14 @@ F 3 "" H 6800 8250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_DPST SW1
+L Switch:SW_Push SW1
 U 1 1 60741EC8
-P 7650 3050
-F 0 "SW1" H 7650 3375 50  0000 C CNN
-F 1 "EVQQ2" H 7650 3284 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_SPST_EVQQ2" H 7650 3050 50  0001 C CNN
-F 3 "~" H 7650 3050 50  0001 C CNN
-	1    7650 3050
+P 7650 2950
+F 0 "SW1" H 7650 3275 50  0000 C CNN
+F 1 "EVQQ2" H 7650 3184 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_EVQQ2" H 7650 2950 50  0001 C CNN
+F 3 "~" H 7650 2950 50  0001 C CNN
+	1    7650 2950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -286,19 +286,10 @@ $EndComp
 Wire Wire Line
 	7350 3400 7350 3350
 Wire Wire Line
-	7350 3350 7350 3150
-Wire Wire Line
 	7350 2950 7450 2950
 Connection ~ 7350 3350
 Wire Wire Line
-	7450 3150 7350 3150
-Connection ~ 7350 3150
-Wire Wire Line
-	7350 3150 7350 2950
-Wire Wire Line
 	7850 2950 7950 2950
-Wire Wire Line
-	7850 3150 7950 3150
 Wire Wire Line
 	7950 3150 7950 2950
 Connection ~ 7950 2950
@@ -618,18 +609,14 @@ Wire Wire Line
 Wire Wire Line
 	10400 5100 10650 5100
 Wire Wire Line
-	10500 5200 10500 4600
-Wire Wire Line
-	10500 4600 10700 4600
+	10500 5200 10500 4800
 Wire Wire Line
 	10500 5200 10650 5200
 Connection ~ 11050 4600
 Wire Wire Line
 	11050 4600 11050 4550
 Wire Wire Line
-	10350 3000 10350 2400
-Wire Wire Line
-	10350 2400 10600 2400
+	10350 3000 10350 2550
 Wire Wire Line
 	10350 3000 10650 3000
 Connection ~ 11050 2400
@@ -1445,17 +1432,6 @@ F 3 "~" H 5550 6400 50  0001 C CNN
 	1    5550 6400
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:R_Small_US R14
-U 1 1 607A8663
-P 6200 6100
-F 0 "R14" V 6150 5950 50  0000 C CNN
-F 1 "100k" V 6250 6300 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6200 6100 50  0001 C CNN
-F 3 "~" H 6200 6100 50  0001 C CNN
-	1    6200 6100
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	5800 6100 6100 6100
 Wire Wire Line
@@ -1965,29 +1941,25 @@ Wire Wire Line
 $Comp
 L Device:R_Small_US R23
 U 1 1 607B166F
-P 10700 2400
-F 0 "R23" V 10750 2500 50  0000 L CNN
-F 1 "10k" V 10650 2200 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 10700 2400 50  0001 C CNN
-F 3 "~" H 10700 2400 50  0001 C CNN
-	1    10700 2400
-	0    1    1    0   
+P 10350 2450
+F 0 "R23" V 10400 2550 50  0000 L CNN
+F 1 "10k" V 10300 2250 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 10350 2450 50  0001 C CNN
+F 3 "~" H 10350 2450 50  0001 C CNN
+	1    10350 2450
+	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	10800 2400 11050 2400
 $Comp
 L Device:R_Small_US R24
 U 1 1 607B2148
-P 10800 4600
-F 0 "R24" V 10868 4646 50  0000 L CNN
-F 1 "10k" V 10700 4550 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 10800 4600 50  0001 C CNN
-F 3 "~" H 10800 4600 50  0001 C CNN
-	1    10800 4600
-	0    1    1    0   
+P 10500 4700
+F 0 "R24" V 10568 4746 50  0000 L CNN
+F 1 "10k" V 10400 4650 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 10500 4700 50  0001 C CNN
+F 3 "~" H 10500 4700 50  0001 C CNN
+	1    10500 4700
+	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	10900 4600 11050 4600
 $Comp
 L 4ms-passives:C_Small C1
 U 1 1 607B3817
@@ -2914,4 +2886,47 @@ Wire Wire Line
 	2950 3250 2550 3250
 Text Label 2550 3250 0    50   ~ 0
 INPUT
+$Comp
+L Device:R_Small_US R14
+U 1 1 608209A8
+P 6200 6100
+F 0 "R14" V 6100 5950 50  0000 C CNN
+F 1 "100k" V 6300 6300 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6200 6100 50  0001 C CNN
+F 3 "~" H 6200 6100 50  0001 C CNN
+	1    6200 6100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0101
+U 1 1 608C6683
+P 10500 4500
+F 0 "#PWR0101" H 10500 4350 50  0001 C CNN
+F 1 "+5V" H 10515 4673 50  0000 C CNN
+F 2 "" H 10500 4500 50  0001 C CNN
+F 3 "" H 10500 4500 50  0001 C CNN
+	1    10500 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10500 4500 10500 4600
+$Comp
+L power:+5V #PWR0102
+U 1 1 609E4F8E
+P 10350 2250
+F 0 "#PWR0102" H 10350 2100 50  0001 C CNN
+F 1 "+5V" H 10365 2423 50  0000 C CNN
+F 2 "" H 10350 2250 50  0001 C CNN
+F 3 "" H 10350 2250 50  0001 C CNN
+	1    10350 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10350 2250 10350 2350
+Wire Wire Line
+	7350 2950 7350 3350
+Text Notes 11950 2400 0    50   ~ 0
+TODO:  Add stacking header pins\nto connect the mainboard to the light board (i.e. the\nback of the control panel…) 
+Text Notes 12050 4650 0    50   ~ 0
+TODO:  Add stacking header pins\nto connect the mainboard to the light board (i.e. the\nback of the control panel…) 
 $EndSCHEMATC
